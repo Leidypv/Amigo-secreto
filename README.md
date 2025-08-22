@@ -39,7 +39,15 @@ Este desafío refuerza las bases necesarias para adaptarse a cualquier lenguaje 
 
 ## 📌 Estado del proyecto
 
-✅ **Proyecto finalizado y completamente funcional.**
+🚧 El proyecto sigue en desarrollo.  
+
+Actualmente la aplicación cumple con las funcionalidades principales:  
+- Agregar nombres de amigos.  
+- Realizar el sorteo del amigo secreto.  
+
+Próximamente se evaluará agregar nuevas características, como:  
+- Reiniciar el sorteo.  
+- Evitar la repetición de nombres en los resultados.
 
 ---
 
