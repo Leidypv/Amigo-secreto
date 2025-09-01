@@ -10,11 +10,20 @@
 
 ## 📌 Descripción del Proyecto
 
-Este proyecto fue desarrollado como parte del desafío **Amigo Secreto** del programa **Oracle Next Education (ONE) & Alura Latam**.
+Este proyecto fue desarrollado como parte del desafío **Challenge Amigo Secreto** del programa **Oracle Next Education (ONE) & Alura Latam**.
 
-**Challenge Amigo Secreto** es una aplicación web interactiva que permite a los usuarios ingresar nombres de amigos y realizar un sorteo aleatorio para determinar quién será el "amigo secreto".  
+El reto entregaba una **base inicial** compuesta por:
+- Un archivo **HTML** con la estructura y presentación del juego.
+- Un archivo **CSS** con los estilos básicos.
+- Un archivo **JavaScript vacío**, donde debía implementarse toda la lógica.
+![Antes](assets/Presentación-original-antes.png)
 
-El proyecto fue desarrollado principalmente en **JavaScript**, complementado con **HTML** y **CSS**, con el objetivo de practicar conceptos esenciales de lógica de programación como:
+El objetivo del desafío es **practicar la lógica de programación** construyendo la funcionalidad de la aplicación. Para lograrlo, la aplicación debe cumplir con los siguientes requisitos:
+1. Permitir que el usuario agregue nombres a través de un campo de texto y un botón **“Añadir”**.
+2. Validar los datos de entrada: si el usuario intenta ingresar un nombre vacío, mostrar un **mensaje de alerta** Por favor, ingrese un nombre.
+3. Realizar el sorteo: al hacer clic en **“Sortear Amigo”**, seleccionar **aleatoriamente** un nombre de la lista y mostrarlo en pantalla.
+
+Durante el desarrollo se ponen en práctica **conceptos esenciales de lógica de programación**, entre ellos:
 
 - **Variables** → almacenamiento y manipulación de datos.  
 - **Condicionales** → validación de entradas y control de flujo.  
@@ -28,26 +37,21 @@ Este desafío refuerza las bases necesarias para adaptarse a cualquier lenguaje 
 
 ## 😃 Funcionalidades
 
-- **Agregar participantes**: ingresar nombres mediante un campo de texto y botón.  
-- **Validación de duplicados**: evita que un nombre se repita.  
-- **Campo obligatorio**: no permite agregar campos vacíos.  
-- **Visualización dinámica**: lista de participantes visible en tiempo real.  
-- **Sorteo aleatorio**: elección automática del amigo secreto.  
-- **Mensaje de resultado**: muestra en pantalla el nombre sorteado.  
-
+- **Agregar participantes**: permite ingresar nombres mediante un campo de texto y el botón **“Añadir”**.  
+- **Validación de duplicados**: evita que un nombre ya registrado se repita en la lista.  
+- **Campo obligatorio**: impide agregar entradas vacías.  
+- **Visualización dinámica**: muestra en tiempo real la lista de participantes ingresados.  
+- **Sorteo aleatorio**: selecciona automáticamente un amigo secreto al presionar el botón **“Sortear Amigo”**.  
+- **Mensaje de resultado**: despliega en pantalla el nombre sorteado.  
+- **Sorteo sin repeticiones**: cada nombre solo puede ser seleccionado una vez durante la ronda.  
+- **Mínimo de participantes**: requiere al menos **3 amigos** para realizar el sorteo.  
+- **Reiniciar juego**: al finalizar todos los sorteos, se habilita el botón **“Nuevo Sorteo”**, que limpia la lista, los resultados y el estado general para comenzar de nuevo.
+  
 ---
 
 ## 📌 Estado del proyecto
 
-🚧 El proyecto sigue en desarrollo.  
-
-Actualmente la aplicación cumple con las funcionalidades principales:  
-- Agregar nombres de amigos.  
-- Realizar el sorteo del amigo secreto.  
-
-Próximamente se evaluará agregar nuevas características, como:  
-- Reiniciar el sorteo.  
-- Evitar la repetición de nombres en los resultados.
+✅ Proyecto finalizado
 
 ---
 
@@ -55,19 +59,24 @@ Próximamente se evaluará agregar nuevas características, como:
 
 ### 1. Agregar amigos
 - Se pueden añadir nombres a la lista.
-- Si el campo está vacío, aparece una alerta.  
-![Validación campo vacío](<assets/Demo-Agregar_Alerta vacio.gif>)
+- **Campo vacío:** si el usuario intenta agregar un nombre vacío, aparece una alerta indicando que debe ingresar un valor.  
+![Validación campo vacío](<assets/Demo_Campo_vacío.gif>)
 
-- Si el nombre ya fue agregado, se muestra otra alerta.  
-![Validación nombre duplicado](<assets/Demo-Duplicidad.gif>)
+- **Nombre duplicado:** si el nombre ya fue agregado, se muestra una alerta de duplicado.  
+![Validación nombre duplicado](<assets/Demo_Nombre_duplicado.gif>)
 
 ### 2. Sorteo del amigo secreto
-- Al hacer clic en "Sortear", se selecciona un amigo al azar.  
-![Sorteo realizado](<assets/Demo-Sorteo.gif>)
+- **Sin participantes:** si no hay nombres en la lista, aparece una alerta indicando que primero deben agregarse amigos.  
+![Validación lista vacía](<assets/Demo_Sin_participantes.gif>)
 
-- Si no hay nombres en la lista, aparece un aviso indicando que se deben agregar amigos.  
-![Validación lista vacía](<assets/Demo-Alerta agregar.gif>)
+- **Mínimo requerido:** para poder realizar el sorteo, deben existir al menos **3 participantes**; de lo contrario, se muestra una alerta.  
+![Validación mínimo requerido](<assets/Demo_Mínimo_requerido.gif>)
 
+- **Sorteo aleatorio:** al hacer clic en **“Sortear”**, se selecciona un amigo al azar.  
+![Sorteo realizado](<assets/Demo_Sorteo_aleatorio.gif>)
+
+- **Fin del sorteo:** si todos los amigos de la lista ya fueron sorteados, aparece una alerta indicando que es necesario iniciar un **nuevo sorteo**.  
+![Nuevo sorteo](<assets/Demo_Fin_sorteo.gif>)
 
 ---
 
@@ -99,7 +108,6 @@ Si quieres ejecutarlo de manera local:
 - **JavaScript**  
   ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)  → Para la lógica de programación (arrays, funciones, validaciones, sorteo aleatorio).
 
-
 - **HTML5**  
   ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)  → Para la estructura de la aplicación.
 
@@ -116,11 +124,22 @@ Si quieres ejecutarlo de manera local:
 
 ## 🎨 Modificaciones Realizadas  
 
-Aunque el proyecto corresponde a un desafío académico, se realizaron algunos cambios personales para personalizarlo:  
+Aunque el proyecto corresponde a un desafío académico, se incorporaron mejoras y personalizaciones para optimizar la experiencia:  
 
+### 🎨 Interfaz y estilo  
 - ✅ Pequeñas modificaciones en el archivo **CSS** para mejorar la presentación.  
-- ✅ Cambio en la **imagen principal** (formato **.png**) para darle un estilo propio.  
+- ✅ Cambio en la **imagen principal (.png)** para darle un estilo propio.  
+- ✅ Inclusión de un **cursor parpadeante** en el campo de texto para mayor dinamismo visual.  
 
+### 👥 Gestión de participantes  
+- ✅ Validación para que **no se puedan ingresar nombres duplicados**.  
+
+### 🎲 Lógica del sorteo  
+- ✅ Validación para que el sorteo solo se ejecute si **hay al menos 3 amigos registrados**.  
+- ✅ Control de sorteos para **evitar que un mismo nombre sea seleccionado más de una vez**.  
+- ✅ Verificación de que **existan amigos disponibles** antes de cada sorteo.  
+- ✅ Implementación de un botón **“Nuevo Sorteo”** que reinicia el juego por completo (lista de participantes, resultados y estado). 
+ 
 ---
 
 ## 🤝 Personas Contribuyentes  
